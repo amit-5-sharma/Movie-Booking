@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <style>
+        /* Your CSS styles go here */
+        body, h1, h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #0070e0;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .payment-form {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .payment-form h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .card-info {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            background-color: #0070e0;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0054a6;
+        }
+
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Payment Gateway</h1>
+    </header>
+    <div class="container">
+        <div class="payment-form">
+            <h2>Payment Details</h2>
+            <form id="payment-details-form">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" placeholder="Enter card number" required>
+
+                <label for="card-holder">Card Holder:</label>
+                <input type="text" id="card-holder" name="card-holder" placeholder="Enter card holder name" required>
+
+                <div class="card-info">
+                    <div>
+                        <label for="expiration">Expiration Date:</label>
+                        <input type="text" id="expiration" name="expiration" placeholder="MM/YY" required>
+                    </div>
+                    <div>
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="Enter CVV" required>
+                    </div>
+                </div>
+
+                <button id="confirm-payment">Confirm Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Popup -->
+    <div id="success-popup" class="popup">
+        <div class="popup-content">
+            <span id="success-message">Payment successful! You have successfully booked a ticket.</span>
+            <button id="close-popup">Close</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const cardNumberInput = document.getElementById("card-number");
+          const expirationInput = document.getElementById("expiration");
+          const successPopup = document.getElementById("success-popup");
+          const closePopupButton = document.getElementById("close-popup");
+          const paymentForm = document.getElementById("payment-details-form");
+      
+          paymentForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+      
+            // Get the current date
+            const currentDate = new Date();
+            // Get the entered expiration date
+            const enteredYear = parseInt('20' + expirationInput.value.substr(3, 2));
+            const enteredMonth = parseInt(expirationInput.value.substr(0, 2)) - 1;
+            const enteredDate = new Date(enteredYear, enteredMonth, 1);
+      
+            if (enteredDate <= currentDate) {
+              alert("Entered expiration date is invalid. Please enter a future date.");
+            } else {
+              displaySuccessPopup();
+            }
+          });
+      
+          closePopupButton.addEventListener("click", function () {
+            hideSuccessPopup();
+            window.location.href = "index.html";
+          });
+      
+          cardNumberInput.addEventListener("input", function () {
+            let cardNumber = cardNumberInput.value.replace(/\D/g, "");
+      
+            if (cardNumber.length > 16) {
+              cardNumber = cardNumber.substr(0, 16);
+            }
+      
+            cardNumber = cardNumber.replace(/(\d{4})(?=\d)/g, "$1-");
+            cardNumberInput.value = cardNumber;
+          });
+      
+          expirationInput.addEventListener("input", function () {
+            let expiration = expirationInput.value.replace(/\D/g, "");
+      
+            if (expiration.length > 4) {
+              expiration = expiration.substr(0, 4);
+            }
+      
+            if (expiration.length >= 2) {
+              expiration = `${expiration.substr(0, 2)}/${expiration.substr(2)}`;
+            }
+      
+            expirationInput.value = expiration;
+      
+            const enteredYear = parseInt('20' + expiration.substr(3, 2));
+            const enteredMonth = parseInt(expiration.substr(0, 2)) - 1;
+            const currentDate = new Date();
+            const enteredDate = new Date(enteredYear, enteredMonth, 1);
+      
+            if (expiration.length === 4 && (enteredDate <= currentDate || enteredMonth > 11)) {
+              expirationInput.setCustomValidity("Entered expiration date is invalid. Please enter a future date.");
+            } else {
+              expirationInput.setCustomValidity("");
+            }
+          });
+      
+          expirationInput.addEventListener("keydown", function (event) {
+            if (event.key === "Backspace" && expirationInput.selectionStart === 3) {
+              event.preventDefault();
+              expirationInput.setSelectionRange(2, 2);
+            }
+          });
+      
+          function displaySuccessPopup() {
+            successPopup.style.display = "block";
+          }
+      
+          function hideSuccessPopup() {
+            successPopup.style.display = "none";
+          }
+        });
+      </script>
+      
+      
+</body>
+</html>
