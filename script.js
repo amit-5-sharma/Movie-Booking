@@ -5,7 +5,7 @@ const movies = [
       genre: "Action",
       description: "Description of Movie 1",
       price: 10,
-      imageUrl: "/Movie 1.avif",
+      imageUrl: "./Movie 1.avif",
 
   },
   {
@@ -14,7 +14,7 @@ const movies = [
       genre: "Comedy",
       description: "Description of Movie 2",
       price: 12,
-      imageUrl: "/Movie 2.avif",
+      imageUrl: "./Movie 2.avif",
   },
   {
       id: 3,
@@ -22,7 +22,7 @@ const movies = [
       genre: "Drama",
       description: "Description of Movie 3",
       price: 15,
-      imageUrl: "/Movie 3.avif",
+      imageUrl: "./Movie 3.avif",
   },
   {
       id: 4,
@@ -30,7 +30,7 @@ const movies = [
       genre: "Action",
       description: "Description of Movie 4",
       price: 10,
-      imageUrl: "/Movie 4.avif",
+      imageUrl: "./Movie 4.avif",
   },
   {
       id: 5,
@@ -38,7 +38,7 @@ const movies = [
       genre: "Comedy",
       description: "Description of Movie 5",
       price: 12,
-      imageUrl: "/Movie 5.avif",
+      imageUrl: "./Movie 5.avif",
   },
   {
       id: 6,
@@ -46,7 +46,7 @@ const movies = [
       genre: "Drama",
       description: "Description of Movie 6",
       price: 15,
-      imageUrl: "/Movie 6.avif"
+      imageUrl: "./Movie 6.avif"
   },
   {
       id: 7,
@@ -54,7 +54,7 @@ const movies = [
       genre: "Action",
       description: "Description of Movie 7",
       price: 10,
-      imageUrl: "/Movie 7.avif",
+      imageUrl: "./Movie 7.avif",
   },
   {
       id: 8,
@@ -62,7 +62,7 @@ const movies = [
       genre: "Comedy",
       description: "Description of Movie 8",
       price: 12,
-      imageUrl: "/Movie 8.avif",
+      imageUrl: "./Movie 8.avif",
   },
   {
       id: 9,
@@ -70,7 +70,7 @@ const movies = [
       genre: "Drama",
       description: "Description of Movie 9",
       price: 15,
-      imageUrl: "/Movie 9.avif",
+      imageUrl: "./Movie 9.avif",
   },
   {
       id: 10,
@@ -78,7 +78,7 @@ const movies = [
       genre: "Action",
       description: "Description of Movie 10",
       price: 10,
-      imageUrl: "/Movie 10.avif",
+      imageUrl: "./Movie 10.avif",
   },
   {
       id: 11,
@@ -86,7 +86,7 @@ const movies = [
       genre: "Comedy",
       description: "Description of Movie 11",
       price: 12,
-      imageUrl: "/Movie 11.avif",
+      imageUrl: "./Movie 11.avif",
   },
   {
       id: 12,
@@ -94,7 +94,7 @@ const movies = [
       genre: "Drama",
       description: "Description of Movie 12",
       price: 15,
-      imageUrl: "/Movie 12.avif",
+      imageUrl: "./Movie 12.avif",
   },
   {
       id: 13,
@@ -102,7 +102,7 @@ const movies = [
       genre: "Action",
       description: "Description of Movie 13",
       price: 10,
-      imageUrl: "/Movie 13.avif",
+      imageUrl: "./Movie 13.avif",
   },
   {
       id: 14,
@@ -110,7 +110,7 @@ const movies = [
       genre: "Comedy",
       description: "Description of Movie 14",
       price: 12,
-      imageUrl: "/Movie 15.avif"
+      imageUrl: "./Movie 15.avif"
   },
   {
       id: 15,
@@ -118,7 +118,7 @@ const movies = [
       genre: "Drama",
       description: "Description of Movie 15",
       price: 15,
-      imageUrl: "/Movie 14.avif",
+      imageUrl: "./Movie 14.avif",
   },
   {
     id: 16,
@@ -126,7 +126,7 @@ const movies = [
     genre: "Drama",
     description: "Description of Movie 15",
     price: 15,
-    imageUrl: "/Movie 16.avif",
+    imageUrl: "./Movie 16.avif",
 },
   
   // Add more movie data here
@@ -245,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function() {
             genre: "Action",
             description: "Description of Movie 10",
             price: 10,
-            imageUrl: "/Movie 10.avif",
+            imageUrl: "./Movie 10.avif",
         },
         {
             id: 2,
@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function() {
             genre: "Comedy",
             description: "Description of Movie 2",
             price: 12,
-            imageUrl: "/Movie 2.avif",
+            imageUrl: "./Movie 2.avif",
         },
         {
             id: 4,
@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function() {
             genre: "Action",
             description: "Description of Movie 4",
             price: 10,
-            imageUrl: "/Movie 4.avif",
+            imageUrl: "./Movie 4.avif",
         },
         {
             id: 3,
@@ -269,7 +269,7 @@ document.addEventListener("DOMContentLoaded", function() {
             genre: "Drama",
             description: "Description of Movie 3",
             price: 15,
-            imageUrl: "/Movie 3.avif",
+            imageUrl: "./Movie 3.avif",
         },
         {
             id: 8,
@@ -277,7 +277,7 @@ document.addEventListener("DOMContentLoaded", function() {
             genre: "Comedy",
             description: "Description of Movie 8",
             price: 12,
-            imageUrl: "/Movie 8.avif",
+            imageUrl: "./Movie 8.avif",
         },
         {
             id: 14,
@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function() {
             genre: "Comedy",
             description: "Description of Movie 14",
             price: 12,
-            imageUrl: "/Movie 15.avif"
+            imageUrl: "./Movie 15.avif"
         },
         {
             id: 13,
@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", function() {
             genre: "Action",
             description: "Description of Movie 13",
             price: 10,
-            imageUrl: "/Movie 13.avif",
+            imageUrl: "./Movie 13.avif",
         },
         {
             id: 5,
@@ -301,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function() {
             genre: "Comedy",
             description: "Description of Movie 5",
             price: 12,
-            imageUrl: "/Movie 5.avif",
+            imageUrl: "./Movie 5.avif",
         },
         {
             id: 12,
@@ -309,7 +309,7 @@ document.addEventListener("DOMContentLoaded", function() {
             genre: "Drama",
             description: "Description of Movie 12",
             price: 15,
-            imageUrl: "/Movie 12.avif",
+            imageUrl: "./Movie 12.avif",
         },
     ];
 
