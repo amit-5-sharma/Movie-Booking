@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Movie Booking</title>
+</head>
+<body>
+    <header>
+        <h1>Movie Booking</h1>
+        <input type="text" id="search" placeholder="Search movies">
+        <select id="genre-select">
+            <option value="">All Genres</option>
+            <option value="Action">Action</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Drama">Drama</option>
+            <!-- Add more genre options here -->
+        </select>
+    </header>
+    
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Welcome to Movie Booking</h1>
+            <p>Discover the latest movies and book your tickets now!</p>
+        </div>
+    </div>
+    <div class="container-heading">
+        <h1>New Releases</h1>
+    </div>
+    <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card">
+                    <div class="img-wrapper"><img src="/Movie 2.avif" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Fukre 3</h5>
+                        <p class="card-text">Genre: Comedy</p>
+                        <button class="btn btn-primary show-details1" data-id="2">Show Details </button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper"><img src="/Movie 4.avif" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Jawan</h5>
+                        <p class="card-text">Genre: Action</p>
+                            <button class="btn btn-primary show-details1" data-id="4">Show Details </button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper"><img src="/Movie 3.avif" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Mission Raniganj</h5>
+                        <p class="card-text">Genre: Drama</p>
+                            <button class="btn btn-primary show-details1" data-id="3">Show Details </button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper"><img src="/Movie 13.avif" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">The Nun II</h5>
+                        <p class="card-text">Genre: Action</p>
+                            <button class="btn btn-primary show-details1" data-id="13">Show Details </button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper"><img src="/Movie 12.avif" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Brahmastra</h5>
+                        <p class="card-text">Genre: Drama</p>
+                            <button class="btn btn-primary show-details1" data-id="12">Show Details </button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper"><img src="Movie 10.avif" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">RRR</h5>
+                        <p class="card-text">Genre: Action</p>
+                            <button class="btn btn-primary show-details1" data-id="10">Show Details </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+      <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+      <script src="./script1.js"></script>
+
+      <div class="container-heading">
+        <h1>Popular Movies</h1>
+    </div>
+    <div id="carouselExampleControls1" class="carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card">
+                    <div class="img-wrapper"><img src="/Movie 4.avif" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Jawan</h5>
+                        <p class="card-text">Genre: Action</p>
+                            <button class="btn btn-primary show-details1" data-id="4">Show Details </button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper"><img src="/Movie 8.avif" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Bhagavanth Kesari</h5>
+                        <p class="card-text">Genre: Comedy</p>
+                            <button class="btn btn-primary show-details1" data-id="8">Show Details </button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper"><img src="/Movie 15.avif" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Dhak Dhak</h5>
+                        <p class="card-text">Genre: Comedy</p>
+                            <button class="btn btn-primary show-details1" data-id="14">Show Details </button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper"><img src="/Movie 5.avif" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Ganapath</h5>
+                        <p class="card-text">Genre: Comedy</p>
+                            <button class="btn btn-primary show-details1" data-id="5">Show Details </button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper"><img src="/Movie 2.avif" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Fukre 3</h5>
+                        <p class="card-text">Genre: Comedy</p>
+                            <button class="btn btn-primary show-details1" data-id="2">Show Details </button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper"><img src="/Movie 13.avif" class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">The Nun II</h5>
+                        <p class="card-text">Genre: Action</p>
+                            <button class="btn btn-primary show-details1" data-id="13">Show Details </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+      <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+      <script src="./script2.js"></script>  
+         
+    <div class="container-heading">
+        <h1>Listed Movies</h1>
+    </div>
+    <div class="container">
+        <div class="movie-list">
+            <!-- Movies will be dynamically added here -->
+        </div>
+        <div class="movie-details">
+            <!-- Movie details will be displayed here -->
+        </div>
+    </div>
+    
+
+     <!-- Footer Section -->
+
+    <script src="./script.js"></script> 
+
+    <footer class="footer">
+        <p id="footer-para">Welcome to our online movie booking platform, your exclusive gateway to an enchanting world of film and entertainment. Explore the features that make your movie experience exceptional:</p>
+        <!-- <div class="footer-content">
+            <div class="footer-link">
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Blogs</a>
+            </div>
+        </div> -->
+        <div class="footer-bottom">
+            <p class="copyright">
+                &copy; 2023 Movie Booking. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    
+</body>
+</html>
