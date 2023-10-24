@@ -204,7 +204,7 @@ movieList.addEventListener("click", (event) => {
                     <input type="number" id="quantity" value="1" min="1">
                     <!-- Display the total price here -->
                     <p class="total-price">Total Price: $${selectedMovie.price}</p>
-                    <a href="/checkout.html">
+                    <a href="./checkout.html">
                         <button class="book-now-button" data-id="${selectedMovie.id}">Book Tickets</button>
                     </a>
                     <button class="close-popup">Close</button>
@@ -333,7 +333,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <input type="number" id="quantity" value="1" min="1">
                         <!-- Display the total price here -->
                         <p class="total-price">Total Price: $${selectedMovie.price}</p>
-                        <a href="/checkout.html">
+                        <a href="./checkout.html">
                             <button class="book-now-button" data-id="${selectedMovie.id}">Book Tickets</button>
                         </a>
                         <button class="close-popup">Close</button>
