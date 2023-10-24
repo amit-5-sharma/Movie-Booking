@@ -16,7 +16,7 @@ header {
 
 /* Style the hero section */
 .hero {
-    background-image: url("/Hero image.jpg");
+    background-image: url("./Hero image.jpg");
     background-size: cover;
     background-position: center;
     text-align: center;
